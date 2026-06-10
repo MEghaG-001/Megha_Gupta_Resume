@@ -61,6 +61,13 @@ a:hover{
     font-size:14px;
     font-weight:600;
 }
+.skills span::after {
+    content: " | ";
+}
+
+.skills span:last-child::after {
+    content: "";
+}
 
 footer{
     text-align: center;
