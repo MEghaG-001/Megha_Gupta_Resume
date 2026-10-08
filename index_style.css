@@ -1,212 +1,335 @@
-
 * {
     box-sizing: border-box;
 }
 
+html,
 body {
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background: #f5f5f5;
-    color: #222;
-    line-height: 1.45;
-    font-size: 14px;
+    padding: 0;
 }
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    background: #f5f5f5;
+    color: #111;
+    font-size: 14px;
+    line-height: 1.15;
+}
+
+
+/* ================================
+   RESUME
+================================ */
+
+.resume-container {
+    width: 210mm;
+    min-height: 297mm;
+    max-width: 900px;
+
+    margin: 15px auto;
+    padding: 12mm 13mm;
+
+    background: white;
+}
+
+
+/* ================================
+   HEADER
+================================ */
 
 header {
     text-align: center;
-    padding: 0 0 10px;
-    background: none;
+    margin-bottom: 6px;
 }
+
 header h1 {
-    margin: 0 0 6px;
-    font-size: 30px;
-    letter-spacing: 0.5px;
+    margin: 0 0 3px;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
 }
 
-header p {
+.contact {
     margin: 0;
-    font-size: 14px;
+    font-size: 11px;
 }
 
-header a {
-    color: #222;
+.contact span {
+    margin: 0 4px;
+}
+
+
+/* ================================
+   LINKS
+================================ */
+
+a {
+    color: #111;
     text-decoration: none;
 }
 
-header a:hover {
+a:hover {
     text-decoration: underline;
 }
 
 
-
-/* MAIN RESUME */
-
-.resume-container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 28px 38px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-}
-
-
-/* NAME + CONTACT */
-
-.resume-container h1 {
-    text-align: center;
-    margin: 0 0 6px;
-    font-size: 30px;
-    letter-spacing: 0.5px;
-}
-
-.resume-container > p {
-    text-align: center;
-    margin: 0;
-    font-size: 14px;
-}
-
-.resume-container a {
-    color: #222;
-    text-decoration: none;
-}
-
-.resume-container a:hover {
-    text-decoration: underline;
-}
-
-
-/* SECTIONS */
+/* ================================
+   SECTIONS
+================================ */
 
 section {
-    margin-bottom: 18px;
+    margin-bottom: 7px;
 }
 
 section h2 {
     margin: 0;
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 0.7px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 section hr {
-    border: none;
-    border-top: 1.5px solid #222;
-    margin: 5px 0 10px;
+    border: 0;
+    border-top: 1px solid #777;
+    margin: 2px 0 4px;
 }
 
 
-/* TEXT */
+/* ================================
+   NORMAL TEXT
+================================ */
 
 p {
-    margin: 5px 0;
-}
-
-h3 {
-    margin: 10px 0 3px;
-    font-size: 15px;
+    margin: 2px 0;
+    font-size: 14px;
+    line-height: 1.15;
 }
 
 
-/* LISTS */
+/* ================================
+   EDUCATION
+================================ */
 
-ul {
-    margin: 5px 0 8px;
-    padding-left: 20px;
-}
-
-li {
+.entry {
     margin-bottom: 4px;
 }
 
-
-/* SOFT SKILLS */
-
-.skills {
+.entry-header {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 15px;
+
+    font-size: 14px;
+    line-height: 1.1;
 }
 
-.skills span {
-    padding: 5px 10px;
-    border: 1px solid #bbb;
-    border-radius: 4px;
+.entry-header strong {
+    font-weight: bold;
+}
+
+.entry-header span {
+    white-space: nowrap;
     font-size: 13px;
 }
 
 
-/* FOOTER */
+/* ================================
+   PROJECTS
+================================ */
 
-footer {
-    text-align: center;
-    padding: 12px;
+.project {
+    margin-bottom: 4px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.project h3 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.1;
+}
+
+.project-type,
+.project-link {
+    flex-shrink: 0;
     font-size: 12px;
-    color: #555;
+    white-space: nowrap;
+}
+
+.project-link {
+    text-decoration: underline;
 }
 
 
-/* MOBILE */
+/* ================================
+   SEPARATORS
+================================ */
 
-@media (max-width: 700px) {
+.separator {
+    margin: 0 3px;
+}
+
+
+/* ================================
+   SOFT SKILLS
+================================ */
+
+.soft-skills {
+    word-spacing: 1px;
+}
+
+.soft-skills span {
+    margin: 0 4px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media screen and (max-width: 700px) {
 
     body {
-        font-size: 13px;
+        background: white;
     }
 
     .resume-container {
-        margin: 10px;
+        width: 100%;
+        min-height: auto;
+        margin: 0;
         padding: 20px;
     }
 
-    .resume-container h1 {
-        font-size: 25px;
+    header h1 {
+        font-size: 27px;
+    }
+
+    .entry-header,
+    .project-header {
+        gap: 8px;
+    }
+}
+
+
+/* ================================
+   PRINT / PDF
+================================ */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 5mm;
+    }
+
+    html,
+    body {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    body {
+        font-size: 14px;
+        line-height: 1.1;
+    }
+
+    .resume-container {
+        width: 100%;
+        min-height: auto;
+        max-width: none;
+
+        margin: 0;
+        padding: 0;
+
+        background: white;
+        box-shadow: none;
+    }
+
+
+    /* HEADER */
+
+    header {
+        margin-bottom: 5px;
+    }
+
+    header h1 {
+        font-size: 27px;
+        margin-bottom: 2px;
+    }
+
+    .contact {
+        font-size: 11px;
+    }
+
+
+    /* SECTION */
+
+    section {
+        margin-bottom: 5px;
+        page-break-inside: avoid;
     }
 
     section h2 {
         font-size: 16px;
     }
 
-    h3 {
+    section hr {
+        margin: 1px 0 3px;
+    }
+
+
+    /* TEXT */
+
+    p {
+        font-size: 14px;
+        line-height: 1.1;
+        margin: 1px 0;
+    }
+
+
+    /* EDUCATION */
+
+    .entry {
+        margin-bottom: 2px;
+    }
+
+    .entry-header {
+        font-size: 14px;
+        line-height: 1.05;
+    }
+
+    .entry-header span {
+        font-size: 13px;
+    }
+
+
+    /* PROJECTS */
+
+    .project {
+        margin-bottom: 2px;
+    }
+
+    .project h3 {
         font-size: 14px;
     }
-}
 
-
-/* PRINT / PDF */
-
-@media print {
-
-    body {
-        background: white;
-        font-size: 11px;
-    }
-
-    .resume-container {
-        max-width: none;
-        margin: 0;
-        padding: 15px 25px;
-        box-shadow: none;
-        border-radius: 0;
-    }
-
-    .resume-container h1 {
-        font-size: 24px;
-    }
-
-    section {
-        margin-bottom: 10px;
-    }
-
-    section h2 {
-        font-size: 14px;
-    }
-
-    h3 {
+    .project-type,
+    .project-link {
         font-size: 12px;
     }
 
-    footer {
-        display: none;
+
+    /* SOFT SKILLS */
+
+    .soft-skills {
+        font-size: 14px;
     }
 }
